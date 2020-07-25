@@ -1,0 +1,111 @@
+
+Showing logs for build [32mrajattyagipvr-ml-pytorch-traini-b97cc-1-5kbwf[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-lnwbf[0m
+{"level":"warn","ts":1595691556.4422731,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1595691556.4425755,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mrajattyagipvr-ml-pytorch-traini-b97cc-1-5kbwf[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-q85zj[0m
+{"level":"warn","ts":1595691557.398091,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1595691557.399078,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mrajattyagipvr-ml-pytorch-traini-b97cc-1-5kbwf[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mrajattyagipvr-ml-pytorch-traini-b97cc-1-5kbwf[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-rajattyagipvr-ml-pytorch-traini-b97cc-kdfqs[0m
+{"level":"warn","ts":1595691608.483464,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1595691610.4855764,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*************/ml-pytorch-training.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mrajattyagipvr-ml-pytorch-traini-b97cc-1-5kbwf[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mrajattyagipvr-ml-pytorch-traini-b97cc-1-5kbwf[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Cloning the Jenkins X versions repo https://github.com/*************/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+Generated Git credentials file /builder/home/git/credentials
+
+Showing logs for build [32mrajattyagipvr-ml-pytorch-traini-b97cc-1-5kbwf[0m stage [32mfrom-build-pack[0m and container [32mstep-build-flake8[0m
+
+Showing logs for build [32mrajattyagipvr-ml-pytorch-traini-b97cc-1-5kbwf[0m stage [32mfrom-build-pack[0m and container [32mstep-build-training[0m
+Requirement already satisfied: torch==1.0.1.post2 in /root/anaconda3/lib/python3.7/site-packages (from -r ./requirements.txt (line 2)) (1.0.1.post2)
+Collecting torchvision==0.2.1 (from -r ./requirements.txt (line 3))
+  Downloading https://files.pythonhosted.org/packages/ca/0d/f00b2885711e08bd71242ebe7b96561e6f6d01fdb4b9dcf4d37e2e13c5e1/torchvision-0.2.1-py2.py3-none-any.whl (54kB)
+Requirement already satisfied: future==0.17.1 in /root/anaconda3/lib/python3.7/site-packages (from -r ./requirements.txt (line 4)) (0.17.1)
+Requirement already satisfied: onnx==1.4.1 in /root/anaconda3/lib/python3.7/site-packages (from -r ./requirements.txt (line 5)) (1.4.1)
+Requirement already satisfied: protobuf==3.7.1 in /root/anaconda3/lib/python3.7/site-packages (from -r ./requirements.txt (line 6)) (3.7.1)
+Requirement already satisfied: six in /root/anaconda3/lib/python3.7/site-packages (from torchvision==0.2.1->-r ./requirements.txt (line 3)) (1.12.0)
+Requirement already satisfied: numpy in /root/anaconda3/lib/python3.7/site-packages (from torchvision==0.2.1->-r ./requirements.txt (line 3)) (1.16.2)
+Requirement already satisfied: pillow>=4.1.1 in /root/anaconda3/lib/python3.7/site-packages (from torchvision==0.2.1->-r ./requirements.txt (line 3)) (5.4.1)
+Collecting typing>=3.6.4 (from onnx==1.4.1->-r ./requirements.txt (line 5))
+  Downloading https://files.pythonhosted.org/packages/05/d9/6eebe19d46bd05360c9a9aae822e67a80f9242aabbfc58b641b957546607/typing-3.7.4.3.tar.gz (78kB)
+Collecting typing-extensions>=3.6.2.1 (from onnx==1.4.1->-r ./requirements.txt (line 5))
+  Downloading https://files.pythonhosted.org/packages/0c/0e/3f026d0645d699e7320b59952146d56ad7c374e9cd72cd16e7c74e657a0f/typing_extensions-3.7.4.2-py3-none-any.whl
+Requirement already satisfied: setuptools in /root/anaconda3/lib/python3.7/site-packages (from protobuf==3.7.1->-r ./requirements.txt (line 6)) (40.8.0)
+Building wheels for collected packages: typing
+  Building wheel for typing (setup.py): started
+  Building wheel for typing (setup.py): finished with status 'done'
+  Stored in directory: /builder/home/.cache/pip/wheels/2d/04/41/8e1836e79581989c22eebac3f4e70aaac9af07b0908da173be
+Successfully built typing
+Installing collected packages: torchvision, typing, typing-extensions
+Successfully installed torchvision-0.2.1 typing-3.7.4.3 typing-extensions-3.7.4.2
+Downloading: "https://download.pytorch.org/models/alexnet-owt-4df8aa71.pth" to /builder/home/.torch/models/alexnet-owt-4df8aa71.pth
+0it [00:00, ?it/s]8192it [00:00, 51185.02it/s]40960it [00:00, 65585.16it/s]106496it [00:00, 87070.22it/s]245760it [00:00, 118633.28it/s]524288it [00:00, 164133.38it/s]1064960it [00:01, 229218.99it/s]2088960it [00:01, 321853.70it/s]4186112it [00:01, 456675.94it/s]5070848it [00:01, 636978.74it/s]8445952it [00:01, 899557.64it/s]13639680it [00:01, 1267820.77it/s]18866176it [00:01, 1778642.25it/s]23535616it [00:02, 2468173.07it/s]28680192it [00:02, 3400581.30it/s]33890304it [00:02, 4619098.48it/s]39051264it [00:02, 6188591.72it/s]44228608it [00:02, 8061334.26it/s]49258496it [00:03, 10316818.74it/s]54386688it [00:03, 12757167.28it/s]59596800it [00:03, 15372257.69it/s]64790528it [00:03, 17900342.82it/s]70017024it [00:03, 20244924.46it/s]74604544it [00:03, 24319322.78it/s]77996032it [00:03, 23170474.74it/s]81002496it [00:04, 24506655.01it/s]84680704it [00:04, 27232277.53it/s]87851008it [00:04, 23474194.61it/s]91398144it [00:04, 24686718.32it/s]94806016it [00:04, 25502009.54it/s]99098624it [00:04, 29035834.66it/s]102326272it [00:04, 26584632.60it/s]105250816it [00:04, 25610336.56it/s]110288896it [00:05, 26413143.86it/s]114253824it [00:05, 29159295.62it/s]117358592it [00:05, 26829161.82it/s]120438784it [00:05, 27150048.81it/s]124641280it [00:05, 30061688.81it/s]127827968it [00:05, 26554497.31it/s]131145728it [00:05, 28136188.30it/s]134799360it [00:05, 30219116.36it/s]137986048it [00:06, 26053361.76it/s]141172736it [00:06, 27020671.01it/s]145096704it [00:06, 29804717.55it/s]148283392it [00:06, 26702338.49it/s]151527424it [00:06, 27449603.29it/s]156082176it [00:06, 30806680.35it/s]159399936it [00:06, 26690206.03it/s]162332672it [00:06, 27103426.90it/s]166535168it [00:07, 29998364.27it/s]169762816it [00:07, 27573840.55it/s]172720128it [00:07, 27423884.87it/s]176250880it [00:07, 27993618.44it/s]179150848it [00:07, 27054562.77it/s]182329344it [00:07, 27558354.07it/s]185835520it [00:07, 29302888.87it/s]188841984it [00:07, 26155777.65it/s]191832064it [00:08, 26200022.19it/s]196354048it [00:08, 29983047.73it/s]199606272it [00:08, 26649939.84it/s]202514432it [00:08, 26592805.47it/s]206872576it [00:08, 29810514.90it/s]210100224it [00:08, 27615361.61it/s]213065728it [00:08, 27006199.83it/s]216211456it [00:08, 28202322.69it/s]219152384it [00:08, 27925516.44it/s]223141888it [00:09, 27199275.38it/s]226344960it [00:09, 28488113.82it/s]229253120it [00:09, 25701946.67it/s]233594880it [00:09, 28306057.37it/s]237314048it [00:09, 30488428.83it/s]240517120it [00:09, 26611506.95it/s]244047872it [00:09, 28702699.04it/s]244418560it [00:09, 24770496.62it/s]
+graph(%actual_input_1 : Float(10, 3, 224, 224)
+      %learned_0 : Float(64, 3, 11, 11)
+      %learned_1 : Float(64)
+      %learned_2 : Float(192, 64, 5, 5)
+      %learned_3 : Float(192)
+      %learned_4 : Float(384, 192, 3, 3)
+      %learned_5 : Float(384)
+      %learned_6 : Float(256, 384, 3, 3)
+      %learned_7 : Float(256)
+      %learned_8 : Float(256, 256, 3, 3)
+      %learned_9 : Float(256)
+      %learned_10 : Float(4096, 9216)
+      %learned_11 : Float(4096)
+      %learned_12 : Float(4096, 4096)
+      %learned_13 : Float(4096)
+      %learned_14 : Float(1000, 4096)
+      %learned_15 : Float(1000)) {
+  %17 : Float(10, 64, 55, 55) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[11, 11], pads=[2, 2, 2, 2], strides=[4, 4]](%actual_input_1, %learned_0, %learned_1), scope: AlexNet/Sequential[features]/Conv2d[0]
+  %18 : Float(10, 64, 55, 55) = onnx::Relu(%17), scope: AlexNet/Sequential[features]/ReLU[1]
+  %19 : Float(10, 64, 27, 27) = onnx::MaxPool[kernel_shape=[3, 3], pads=[0, 0, 0, 0], strides=[2, 2]](%18), scope: AlexNet/Sequential[features]/MaxPool2d[2]
+  %20 : Float(10, 192, 27, 27) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[5, 5], pads=[2, 2, 2, 2], strides=[1, 1]](%19, %learned_2, %learned_3), scope: AlexNet/Sequential[features]/Conv2d[3]
+  %21 : Float(10, 192, 27, 27) = onnx::Relu(%20), scope: AlexNet/Sequential[features]/ReLU[4]
+  %22 : Float(10, 192, 13, 13) = onnx::MaxPool[kernel_shape=[3, 3], pads=[0, 0, 0, 0], strides=[2, 2]](%21), scope: AlexNet/Sequential[features]/MaxPool2d[5]
+  %23 : Float(10, 384, 13, 13) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%22, %learned_4, %learned_5), scope: AlexNet/Sequential[features]/Conv2d[6]
+  %24 : Float(10, 384, 13, 13) = onnx::Relu(%23), scope: AlexNet/Sequential[features]/ReLU[7]
+  %25 : Float(10, 256, 13, 13) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%24, %learned_6, %learned_7), scope: AlexNet/Sequential[features]/Conv2d[8]
+  %26 : Float(10, 256, 13, 13) = onnx::Relu(%25), scope: AlexNet/Sequential[features]/ReLU[9]
+  %27 : Float(10, 256, 13, 13) = onnx::Conv[dilations=[1, 1], group=1, kernel_shape=[3, 3], pads=[1, 1, 1, 1], strides=[1, 1]](%26, %learned_8, %learned_9), scope: AlexNet/Sequential[features]/Conv2d[10]
+  %28 : Float(10, 256, 13, 13) = onnx::Relu(%27), scope: AlexNet/Sequential[features]/ReLU[11]
+  %29 : Float(10, 256, 6, 6) = onnx::MaxPool[kernel_shape=[3, 3], pads=[0, 0, 0, 0], strides=[2, 2]](%28), scope: AlexNet/Sequential[features]/MaxPool2d[12]
+  %30 : Long() = onnx::Constant[value={0}](), scope: AlexNet
+  %31 : Tensor = onnx::Shape(%29), scope: AlexNet
+  %32 : Long() = onnx::Gather[axis=0](%31, %30), scope: AlexNet
+  %33 : Long() = onnx::Constant[value={9216}](), scope: AlexNet
+  %34 : Tensor = onnx::Unsqueeze[axes=[0]](%32)
+  %35 : Tensor = onnx::Unsqueeze[axes=[0]](%33)
+  %36 : Tensor = onnx::Concat[axis=0](%34, %35)
+  %37 : Float(10, 9216) = onnx::Reshape(%29, %36), scope: AlexNet
+  %38 : Float(10, 9216), %39 : Tensor = onnx::Dropout[ratio=0.5](%37), scope: AlexNet/Sequential[classifier]/Dropout[0]
+  %40 : Float(10, 4096) = onnx::Gemm[alpha=1, beta=1, transB=1](%38, %learned_10, %learned_11), scope: AlexNet/Sequential[classifier]/Dropout[0]
+  %41 : Float(10, 4096) = onnx::Relu(%40), scope: AlexNet/Sequential[classifier]/ReLU[2]
+  %42 : Float(10, 4096), %43 : Tensor = onnx::Dropout[ratio=0.5](%41), scope: AlexNet/Sequential[classifier]/Dropout[3]
+  %44 : Float(10, 4096) = onnx::Gemm[alpha=1, beta=1, transB=1](%42, %learned_12, %learned_13), scope: AlexNet/Sequential[classifier]/Dropout[3]
+  %45 : Float(10, 4096) = onnx::Relu(%44), scope: AlexNet/Sequential[classifier]/ReLU[5]
+  %output1 : Float(10, 1000) = onnx::Gemm[alpha=1, beta=1, transB=1](%45, %learned_14, %learned_15), scope: AlexNet/Sequential[classifier]/ReLU[5]
+  return (%output1);
+}
+
+
+Showing logs for build [32mrajattyagipvr-ml-pytorch-traini-b97cc-1-5kbwf[0m stage [32mfrom-build-pack[0m and container [32mstep-build-export-model[0m
+error: error getting Requirements from TeamSettings to determine if in GitHub app mode: validation failures in requirements from team settings:
+(root): Additional property buildPackURL is not allowed
+environments.0.ingress: Additional property kind is not allowed
+ingress: Additional property kind is not allowed
+fatal: repository '/*************/ml-pytorch-service' does not exist
+Switched to a new branch 'syncmodel'
+Updated git hooks.
+Git LFS initialized.
+"*.onnx" already supported
+cp: cannot stat ‘../*.onnx’: No such file or directory
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-export-model'. The execution of the pipeline has stopped.[0m
